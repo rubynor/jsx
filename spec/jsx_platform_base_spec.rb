@@ -11,7 +11,7 @@ describe Jsx::Platform::Base do
     end
 
     it "should be array with appname and version" do
-      @osx.find_target(@body).should eql ['indesign','6.0']
+      expect(@osx.find_target(@body)).to eql ['indesign','6.0']
     end
   end
 
@@ -23,35 +23,35 @@ describe Jsx::Platform::Base do
     end
 
     it "should be ['indesign','5.0']" do
-      @osx.find_target("#target indesign-5.0").should eql ['indesign','5.0']
+      expect(@osx.find_target("#target indesign-5.0")).to eql ['indesign','5.0']
     end
 
     it "should be ['indesign','6.0']" do
-      @osx.find_target("#target InDesign-6.0").should eql ['indesign','6.0']
+      expect(@osx.find_target("#target InDesign-6.0")).to eql ['indesign','6.0']
     end
 
     it "should be ['indesign','7.0']" do
-      @osx.find_target("#target \"InDesign-7.0\"").should eql ['indesign','7.0']
+      expect(@osx.find_target("#target \"InDesign-7.0\"")).to eql ['indesign','7.0']
     end
 
     it "should be ['indesign','7.5']" do
-      @osx.find_target("#target \"InDesign 7.5\"").should eql ['indesign','7.5']
+      expect(@osx.find_target("#target \"InDesign 7.5\"")).to eql ['indesign','7.5']
     end
 
     it "should be ['indesign','8.0']" do
-      @osx.find_target("#target 'indesign 8.0'").should eql ['indesign','8.0']
+      expect(@osx.find_target("#target 'indesign 8.0'")).to eql ['indesign','8.0']
     end
 
     it "should be ['indesign','9.2']" do
-      @osx.find_target("#target 'indesign 9.2'").should eql ['indesign','9.2']
+      expect(@osx.find_target("#target 'indesign 9.2'")).to eql ['indesign','9.2']
     end
 
     it "should be ['indesign','0.0']" do
-      @osx.find_target("#target 'indesign 0.0'").should eql ['indesign','0.0']
+      expect(@osx.find_target("#target 'indesign 0.0'")).to eql ['indesign','0.0']
     end
 
     it "should be ['indesign']" do
-      @osx.find_target("#target indesign").should eql ['indesign']
+      expect(@osx.find_target("#target indesign")).to eql ['indesign']
     end
 
   end

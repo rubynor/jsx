@@ -10,7 +10,7 @@ describe Jsx::Platform::OSX do
     end
 
     it "should be collect application name and version" do
-      @osx.get_app_name.should eql 'Adobe InDesign CS5'
+      expect(@osx.get_app_name).to eql 'Adobe InDesign CS5'
     end
   end
 
@@ -21,7 +21,7 @@ describe Jsx::Platform::OSX do
     end
 
     it "should be collect application name and version" do
-      @osx.get_app_name.should eql 'Adobe InDesign CS4'
+      expect(@osx.get_app_name).to eql 'Adobe InDesign CS4'
     end
   end
 
@@ -32,7 +32,7 @@ describe Jsx::Platform::OSX do
     end
 
     it "should be collect application name and version" do
-      @osx.get_app_name.should eql 'Adobe InDesign CC'
+      expect(@osx.get_app_name).to eql 'Adobe InDesign CC'
     end
   end
 
@@ -43,7 +43,7 @@ describe Jsx::Platform::OSX do
     end
 
     it "should be collect application name and version" do
-      @osx.get_app_name.should eql 'Adobe InDesign CC 2014'
+      expect(@osx.get_app_name).to eql 'Adobe InDesign CC 2014'
     end
   end
 
